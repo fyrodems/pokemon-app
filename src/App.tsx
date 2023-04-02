@@ -1,5 +1,5 @@
 import Navbar from "./sections/Navbar"
-import Wrapper from "./sections/Wrapper"
+// import Wrapper from "./sections/Wrapper"
 import Footer from "./sections/Footer"
 import Background from "./components/Background"
 import Search from "./pages/Search"
@@ -25,7 +25,7 @@ const App = () => {
           <Route path="/compare" element={<Compare />} />
           <Route path="/pokemon/:id" element={<Pokemon />} />
         </Routes>
-        <Wrapper />
+        {/* <Wrapper /> */}
         <Footer />
       </div>
       </BrowserRouter>
