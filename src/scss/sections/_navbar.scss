@@ -32,7 +32,7 @@ nav {
       z-index: 1;
       position: relative;
 
-      li {
+      a {
         text-transform: uppercase;
         letter-spacing: 0.2rem;
         cursor: pointer;
@@ -40,12 +40,9 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        a {
-          text-decoration: none;
-          color: white;
-          border-bottom: 1px solid transparent;
-        }
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px solid transparent;
       }
 
       .underline {
@@ -67,10 +64,6 @@ nav {
         &:nth-child(2) {
           transition: calc(500ms * 1.2) ease-in-out;
         }
-
-        // &:nth-child(3) {
-        //   transition: calc(500ms * 0.8) ease-in-out;
-        // }
       }
     }
   }

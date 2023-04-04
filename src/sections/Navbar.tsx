@@ -1,8 +1,13 @@
 import pokeballIcon from "../assets/pokeball-icon.png";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Navbar = () => {
+
+  const location = useLocation();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const navigationRoutes = [
     { name: "Search", route: "/search" },
     { name: "Compare", route: "/compare" },
@@ -10,6 +15,21 @@ const Navbar = () => {
     { name: "MyList", route: "/list" },
     { name: "About", route: "/about" },
   ];
+
+
+  useEffect(() => {
+    const index = navigationRoutes.findIndex(({route}) => location.pathname.includes(route));
+    ul(index);
+  }, [location.pathname, navigationRoutes]);
+  
+  const ul = (index: number) => {
+    const underlines = document.querySelectorAll<HTMLElement>(".underline");
+  
+    underlines.forEach((underline: HTMLElement) => {
+      underline.style.transform = `translate3d(${index * 100}%, 0, 0)`;
+    });
+  }
+  
 
   return (
     <nav>
@@ -22,9 +42,9 @@ const Navbar = () => {
           <div className="underline"></div>
           <div className="underline"></div>
           {navigationRoutes.map((route) => (
-            <li key={route.name}>
-              <Link to={route.route}>{route.name}</Link>
-            </li>
+            <Link key={route.name} to={route.route}>
+              {route.name}
+              </Link>
           ))}
         </ul>
       </div>
