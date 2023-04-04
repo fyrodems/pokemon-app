@@ -1,9 +1,9 @@
-import React from 'react'
+import Wrapper from "../sections/Wrapper"
 
-function Search() {
+const Search = () => {
   return (
     <div>Search</div>
   )
 }
 
-export default Search
+export default Wrapper(Search);

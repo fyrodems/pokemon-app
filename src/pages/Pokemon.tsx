@@ -1,9 +1,9 @@
-import React from 'react'
+import Wrapper from "../sections/Wrapper"
 
-function Pokemon() {
+const Pokemon = () => {
   return (
     <div>Pokemon</div>
   )
 }
 
-export default Pokemon
+export default Wrapper(Pokemon);
