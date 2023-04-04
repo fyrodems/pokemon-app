@@ -18,6 +18,9 @@ const Navbar = () => {
       </div>
       <div className="data">
         <ul>
+          <div className="underline"></div>
+          <div className="underline"></div>
+          <div className="underline"></div>
           {navigationRoutes.map((route) => (
             <li key={route.name}>
               <Link to={route.route}>{route.name}</Link>

@@ -22,5 +22,56 @@ nav {
     border: 0.5px solid rgba(255, 255, 255, 0.25);
     border-top: none;
     border-bottom: none;
+    padding: 0 20rem;
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(5, 20%);
+      height: 100%;
+      list-style: none;
+      z-index: 1;
+      position: relative;
+
+      li {
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        cursor: pointer;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+          color: white;
+          border-bottom: 1px solid transparent;
+        }
+      }
+
+      .underline {
+        display: block;
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        background-color: #fff;
+        width: 20%;
+        height: calc(4px / 2);
+        mix-blend-mode: initial;
+        pointer-events: none;
+        transition: 500ms ease-in-out;
+
+        &:nth-child(1) {
+          transition: calc(500ms * 0.8) ease-in-out;
+        }
+
+        &:nth-child(2) {
+          transition: calc(500ms * 1.2) ease-in-out;
+        }
+
+        // &:nth-child(3) {
+        //   transition: calc(500ms * 0.8) ease-in-out;
+        // }
+      }
+    }
   }
 }
