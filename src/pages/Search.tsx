@@ -2,7 +2,7 @@ import Wrapper from "../sections/Wrapper"
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div>Search1</div>
   )
 }
 
